@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='./static/myhome.css')}}"/>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("https://i.pinimg.com/736x/1b/59/ff/1b59ff752ca5dfd7e1ce56842ab04d2c.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            color: black;
+        }
+
+        header {
+            background-color: #0b5197;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Crop Prediction System Using Machine Learning</h1>
+        <p>
+          Crop Prediction is a critical aspect of modern agriculture, leverging advanced techologies and data analytics
+            to forecast crop yields and optimize farming practices. This process involves the integration of various
+            data sources, including historical crop performance, weather patterns, soil conditions, and satellite
+            imagery. By employing machine Learning algorithms and statistical models, crop prediction systems can
+            analyze these data sets to identify trends and patterns that influence crop growth and productivity.
+        </p>
+        <h3>Let's Predict the Crop</h3>
+        <h2>Click the button below for crop prediction</h2>
+    </main>
+
+    <form action="/Predict">
+        <input type="submit" id="Predict" name="Predict" value="Predict">
+    </form>
+</body>
+</html>

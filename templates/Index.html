@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index-Page</title>
+    <link rel="stylesheet" href="static\index.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://media.licdn.com/dms/image/D5612AQG6Rb_DhL5cAg/article-cover_image-shrink_600_2000/0/1708009028937?e=2147483647&v=beta&t=_y0344RxWZ84g32-qy0iBNKn5fk_Mc-dPInoh6To8zg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(px);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+            text-align: center; /* Centers the labels */
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        button,
+        input[type="submit"] {
+            background: green; /* Button background color */
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        button:hover,
+        input[type="submit"]:hover {
+            background: #005f2f; /* Darker green on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <form action="form" method="POST">
+        <label for="Nitrogen">Nitrogen:</label>
+        <input type="text" id="Nitrogen" name="Nitrogen" min="0" max="100" placeholder="Nitrogen" required>
+
+        <label for="Phosphorus">Phosphorus:</label>
+        <input type="text" id="Phosphorus" name="Phosphorus" min="0" max="100" placeholder="Phosphorus" required>
+
+        <label for="Potassium">Potassium:</label>
+        <input type="text" id="Potassium" name="Potassium" min="0" max="100" placeholder="Potassium" required>
+
+        <label for="Temperature">Temperature:</label>
+        <input type="text" id="Temperature" name="Temperature" min="0" max="100" placeholder="Temperature" required>
+
+        <label for="Humidity">Humidity:</label>
+        <input type="text" id="Humidity" name="Humidity" min="0" max="100" placeholder="Relative Humidity" required>
+
+        <label for="ph">ph:</label>
+        <input type="text" id="ph" name="ph" min="0" max="100" placeholder="ph should be in between 0-14" required>
+
+        <label for="Rainfall">Rainfall:</label>
+        <input type="text" id="Rainfall" name="Rainfall" min="0" max="100" placeholder="Rainfall in mm" required>
+
+        <input type="submit" name="submit" id="submit" value="Predict Your Crop">
+    </form>
+</body>
+
+</html>

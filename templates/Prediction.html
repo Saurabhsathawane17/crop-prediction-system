@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction-page</title>
+    <link rel="stylesheet" href="Crop app\static\prediction.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.yourstory.com/cs/2/f02aced0d86311e98e0865c1f0fe59a2/agritech-1592301275520.png?mode=crop&crop=faces&ar=2%3A1&format=auto&w=1920&q=75') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h4 {
+            margin: 10px 0;
+            font-size: 24px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        h4:nth-of-type(3) {
+            font-size: 32px;
+            color: #ffd700;
+            /* Highlighted color for prediction */
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>According to the Provided Parameters</h4>
+    <h4>You Should Grow --> </h4>
+    <br>
+    <h4>{{prediction}}</h4>
+</body>
+
+</html>
